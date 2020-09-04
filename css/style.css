@@ -12,6 +12,16 @@
   --border-large: 8px;
 }
 
+::-moz-selection {
+  background: var(--geel-licht);
+  color: var(--magenta);
+}
+
+::selection {
+  background: var(--magenta-licht);
+  color: var(--magenta);
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
   color: var(--donker-grijs);
@@ -56,6 +66,39 @@ section {
 
 section:first-of-type {
   padding-top: calc(1.5rem + 5rem);
+}
+
+section.hero {
+  padding: 0;
+}
+
+.hero__img {
+  max-width: 100%;
+  height: 80vh;
+  background: url('/i/htk-hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__img:before {
+  display: block;
+  position: absolute;
+  top: calc(80vh - 2rem);
+  content: ' ';
+  background-image: url('/i/wave-brush.svg');
+  background-size: 120vw 2rem;
+  background-position: center;
+  height: 2rem;
+  width: 100vw;
+  transform: scaleY(-1)
+}
+
+.hero__text {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 1.5rem;
+  color: var(--magenta);
 }
 
 section * {
