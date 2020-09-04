@@ -1,0 +1,93 @@
+@import url("nav.css");
+
+/* Global styles: vars, native element overrides, and so on */
+:root {
+  --geel: hsl(45deg 100% 49%);
+  --geel-licht: hsla(45deg 100% 49% / .1);
+  --magenta: hsl(327deg 100% 37%);
+  --magenta-licht: hsla(327deg 100% 37% / .1);
+  --donker-grijs: hsl(30deg 4% 18%);
+
+  --border-small: 4px;
+  --border-large: 8px;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--donker-grijs);
+  line-height: 1.5;
+
+  background-color: var(--magenta);
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: #fff;
+  scroll-padding-top: 5rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+section {
+  width: 100%;
+  min-height: 20rem;
+  padding: 1.5rem;
+  /* border: 1px solid var(--magenta); */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section:first-of-type {
+  padding-top: calc(1.5rem + 5rem);
+}
+
+section * {
+  max-width: 1024px;
+  width: 100%;
+}
+
+section:nth-child(2n+1) {
+  background-color: var(--geel-licht);
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {transform: translateX(-10rem;)}
+  100%   {transform: translateX(0rem);}
+}
+
+@keyframes moveInLeft {
+  0%     {transform: translateX(-10rem);}
+  100%   {transform: translateX(0rem);}
+}
+
+/* Tablets and Phones */
+@media (min-width: 640px) {
+
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+
+}
