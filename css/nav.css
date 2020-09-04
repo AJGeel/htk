@@ -1,5 +1,5 @@
 nav.headroom--pinned {
-  transform: translateY(-5rem);
+  transform: translateY(0rem);
 }
 
 nav {
@@ -8,6 +8,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  transform: translateY(-5rem);
 
   pointer-events: none;
   transition: transform .2s ease-in-out
