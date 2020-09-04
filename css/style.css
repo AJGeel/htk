@@ -67,6 +67,10 @@ section:nth-child(2n+1) {
   background-color: var(--geel-licht);
 }
 
+section.yellow-background {
+  background-color: var(--geel);
+}
+
 @-webkit-keyframes moveInLeft {
   0% {transform: translateX(-10rem;)}
   100%   {transform: translateX(0rem);}
