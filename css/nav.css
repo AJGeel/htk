@@ -138,8 +138,99 @@ nav.active .nav__links {
 .nav__links li:nth-child(2) { transition-delay: .05s; }
 .nav__links li:nth-child(3) { transition-delay: .10s; }
 .nav__links li:nth-child(4) { transition-delay: .15s; }
-.nav__links li:nth-child(5) { transition-delay: .20s; }
+/* .nav__links li:nth-child(5) { transition-delay: .20s; } */
 
 nav.active .nav__links li {
   transform: translateX(0);
+}
+
+/* Phones */
+@media (min-width: 640px) {
+
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .nav__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav__links li {
+    flex: 0 50%;
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav__links li:hover .nav__thumbnail {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+
+  .nav__links a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1rem;
+  }
+
+  .nav__links .nav__thumbnail {
+    display: initial;
+    opacity: 0.05;
+    width: 80%;
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    height: 200px;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: var(--border-small);
+    transition: opacity .2s ease-in-out, -webkit-filter .2s ease-in-out;
+    transition: opacity .2s ease-in-out, filter .2s ease-in-out;
+    transition: opacity .2s ease-in-out, filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+  }
+
+  #th-home {
+    background: url('https://images.unsplash.com/photo-1514306191717-452ec28c7814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #th-over-ons {
+    background: url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #th-max {
+    background: url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1655&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #th-contact {
+    background: url('https://images.unsplash.com/photo-1518885137200-434f43a6d583?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+
 }

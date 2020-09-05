@@ -22,7 +22,8 @@ function moo() {
   let num = randomInt(3);
 
   const mooSound = new Audio(`/audio/moo_${num}.mp3`);
-  mooSound.play();
+  // mooSound.play();
+  console.log('The sound got too annoying. So here`s a textual `moo` instead. MOOOOO!');
 }
 
 // Returns int from [1, max]
@@ -34,18 +35,32 @@ function randomInt(max) {
 // Toggles the hamburger menu, toggles total overflow
 function toggleHamburger() {
 
+  // Make DOM reference for body
   const body = document.querySelectorAll('body')[0];
 
+  // From active to inactive:
   if (nav.classList.contains('active')) {
+    // Remove the 'active state' from the NAV item
     nav.classList.remove('active');
 
+    // Restore scrolling on the rest of the page
     body.style.overflowY = 'auto';
-    // Restore scrolling
+
+    // Adjust the 'tabindex' values
+    document.querySelectorAll('.nav__link').forEach(item => {
+      item.tabIndex = -1;
+    })
   } else {
+    // Add an 'active state' to the NAV item
     nav.classList.add('active');
 
-    body.style.overflowY = 'hidden';
     // Prevent scrolling when the menu is active
+    body.style.overflowY = 'hidden';
+
+    // Reset the 'tabindex' values in 'nav__link' items
+    document.querySelectorAll('.nav__link').forEach(item => {
+      item.tabIndex = 0;
+    })
   }
 
 }

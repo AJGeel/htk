@@ -34,6 +34,8 @@ html {
   background-color: var(--magenta);
   scroll-padding-top: 5rem;
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -228,8 +230,13 @@ html.is-animating.swup-theme-reverse.is-leaving .swup-transition-main {
   100%   {transform: translateX(0rem);}
 }
 
-/* Tablets and Phones */
+/* Phones */
 @media (min-width: 640px) {
+
+}
+
+/* Tablets */
+@media (min-width: 768px) {
 
 }
 
