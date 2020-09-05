@@ -51,10 +51,11 @@ nav {
   transition: border-color .2s ease-in-out;
   border-radius: var(--border-small);
   border: 2px solid transparent;
+  background: none;
 }
 
 .nav__hamburger:hover {
-  border: 2px solid var(--magenta-licht);
+  border: 2px solid var(--magenta-transparant);
 }
 
 .nav__hamburger #icon__close {
@@ -76,6 +77,7 @@ nav {
 
 nav.active .nav__bar {
   background-color: var(--geel);
+  background-color: var(--geel-licht);
 }
 
 nav.active svg {
@@ -107,6 +109,7 @@ nav.active .nav__links {
   align-items: center;
   padding: 4rem;
   background-color: var(--geel);
+  background: linear-gradient(180deg, var(--geel-licht), var(--geel));
 
   transition: opacity .2s ease-in-out;
 

@@ -11,6 +11,13 @@ htkLogo.addEventListener('click', function() {
   moo();
 })
 
+// Also close the hamburger if any of the links are clicked
+document.querySelectorAll('.nav__link').forEach(item => {
+  item.addEventListener('click', function() {
+    toggleHamburger();
+  });
+})
+
 function moo() {
   let num = randomInt(3);
 
@@ -26,6 +33,7 @@ function randomInt(max) {
 
 // Toggles the hamburger menu, toggles total overflow
 function toggleHamburger() {
+
   const body = document.querySelectorAll('body')[0];
 
   if (nav.classList.contains('active')) {
@@ -43,3 +51,5 @@ function toggleHamburger() {
 }
 
 headroom.init();
+
+const swup = new Swup();

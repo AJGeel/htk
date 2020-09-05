@@ -1,11 +1,15 @@
+@import url("minireset.css");
 @import url("nav.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Yanone+Kaffeesatz:wght@300;500&display=swap');
 
 /* Global styles: vars, native element overrides, and so on */
 :root {
   --geel: hsl(45deg 100% 49%);
-  --geel-licht: hsla(45deg 100% 49% / .1);
+  --geel-licht: hsl(45deg 100% 70%);
+  --geel-transparant: hsla(45deg 100% 49% / .1);
+  --geel-donker: hsl(45 80% 15%);
   --magenta: hsl(327deg 100% 37%);
-  --magenta-licht: hsla(327deg 100% 37% / .1);
+  --magenta-transparant: hsla(327deg 100% 37% / .1);
   --donker-grijs: hsl(30deg 4% 18%);
 
   --border-small: 4px;
@@ -13,12 +17,12 @@
 }
 
 ::-moz-selection {
-  background: var(--geel-licht);
+  background: var(--geel-transparant);
   color: var(--magenta);
 }
 
 ::selection {
-  background: var(--magenta-licht);
+  background: var(--magenta-transparant);
   color: var(--magenta);
 }
 
@@ -29,6 +33,7 @@ html {
 
   background-color: var(--magenta);
   scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,10 +57,64 @@ h3 {
   font-size: 1.25rem;
 }
 
+p {
+  font-size: .9rem;
+}
+
+.link {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: var(--border-large);
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  /* box-shadow: 0 10px 15px -3px hsl(45 100% 49% / .2),
+              0 4px 6px -2px hsl(45 100% 49% / .05); */
+  line-height: 1;
+}
+
+.link:hover {
+  /* box-shadow: 0 10px 15px -3px hsl(45 100% 49% / .4),
+              0 4px 6px -2px hsl(45 100% 49% / .4); */
+}
+
+.link:hover svg.right {
+  transform: translateX(.5rem);
+}
+
+.link:hover svg.left {
+  transform: translateX(-.5rem);
+}
+
+.link.primary {
+  color: white;
+  background-color: var(--magenta);
+}
+
+.link.secondary {
+  background-color: var(--magenta-transparant);
+  /* border-color: var(--geel-donker); */
+  color: var(--donker-grijs);
+}
+
+.link svg {
+  height: auto;
+  width: 1.5rem;
+  margin: 0 .5rem;
+  transition: transform .2s ease-in-out;
+}
+
 section {
   width: 100%;
   min-height: 20rem;
-  padding: 1.5rem;
+  padding:  3rem 1.5rem;
   /* border: 1px solid var(--magenta); */
 
   display: flex;
@@ -94,11 +153,29 @@ section.hero {
 }
 
 .hero__text {
-  padding: 3rem 1.5rem;
+  padding: 1.5rem;
+  padding-top: 3.5rem;
   text-align: center;
   line-height: 1.3;
   font-size: 1.5rem;
   color: var(--magenta);
+}
+
+.hero__text:after {
+  display: block;
+  position: relative;
+  bottom: -3.5rem;
+  left: -1.5rem;
+  content: ' ';
+  background-image: url('/i/wave-brush.svg');
+  background-size: 120vw 2rem;
+  background-position: center;
+  height: 2rem;
+  width: 100vw;
+}
+
+.extra-padding-top {
+  padding-top: 3.5rem;
 }
 
 section * {
@@ -106,12 +183,39 @@ section * {
   width: 100%;
 }
 
-section:nth-child(2n+1) {
-  background-color: var(--geel-licht);
+section:nth-child(2n) {
+  background-color: var(--geel-transparant);
 }
 
 section.yellow-background {
   background-color: var(--geel);
+}
+
+/* Swup animation */
+.swup-transition-main {
+	opacity: 1;
+	transition: opacity 0.3s, transform 0.4s;
+	transform: translate3d(0, 0, 0);
+}
+
+html.is-animating .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(0, -60px, 0);
+}
+
+html.is-animating.is-leaving .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(0, 60px, 0);
+}
+
+html.is-animating.swup-theme-reverse .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(0, 60px, 0);
+}
+
+html.is-animating.swup-theme-reverse.is-leaving .swup-transition-main {
+	opacity: 0;
+	transform: translate3d(0, -60px, 0);
 }
 
 @-webkit-keyframes moveInLeft {
