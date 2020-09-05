@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex nofollow" />
     <title>Max — Het Trojaanse Kalf</title>
     <link rel="shortcut icon" href="https://mlnorq4r7md9.i.optimole.com/LRFP_oo-Hg5dIdkG/w:32/h:32/q:auto/https://hettrojaansekalf.nl/wp-content/uploads/2020/08/cropped-HTK-logo-beeldmerk-RGB.png">
     <link rel="stylesheet" href="css/minireset.css">
@@ -12,7 +13,7 @@
   <body>
     <nav>
       <div class="nav__bar">
-        <a class="nav__logo" href="/index.html">
+        <a href="/index.html" class="nav__logo">
           <img src="i/htk-logo-horizontaal.png" alt="Het Trojaanse Kalf Logo">
         </a>
         <button class="nav__hamburger">
@@ -21,10 +22,22 @@
         </button>
       </div>
       <ul class="nav__links">
-        <li><a class="nav__link" href="/index.html" tabindex="-1">Home</a></li>
-        <li><a class="nav__link" href="/over-ons.html" tabindex="-1">Over Ons</a></li>
-        <li><a class="nav__link" href="/max.html" tabindex="-1">Max (8+)</a></li>
-        <li><a class="nav__link" href="/contact.html" tabindex="-1">Contact</a></li>
+        <li><a class="nav__link" href="/index.html" tabindex="-1">
+          <div class="nav__thumbnail" id="th-home"></div>
+          Home
+        </a></li>
+        <li><a class="nav__link" href="/over-ons.html" tabindex="-1">
+          <div class="nav__thumbnail" id="th-over-ons"></div>
+          Over Ons
+        </a></li>
+        <li><a class="nav__link" href="/max.html" tabindex="-1">
+          <div class="nav__thumbnail" id="th-max"></div>
+          Max (8+)
+        </a></li>
+        <li><a class="nav__link" href="/contact.html" tabindex="-1">
+          <div class="nav__thumbnail" id="th-contact"></div>
+          Contact
+        </a></li>
       </ul>
     </nav>
 
