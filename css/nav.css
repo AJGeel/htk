@@ -167,6 +167,10 @@ nav.active .nav__links li {
     align-items: center;
   }
 
+  .nav__links li:hover {
+    
+  }
+
   .nav__links li:hover .nav__thumbnail {
     opacity: 1;
     -webkit-filter: blur(0px);

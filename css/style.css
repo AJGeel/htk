@@ -43,6 +43,10 @@ body {
   scroll-padding-top: 5rem;
 }
 
+main {
+  min-height: 100vh;
+}
+
 h1, h2, h3 {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -136,7 +140,7 @@ section.hero {
 .hero__img {
   max-width: 100%;
   height: 80vh;
-  background: url('/images/htk-hero.jpg');
+  background: url('../i/htk-hero.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -146,7 +150,7 @@ section.hero {
   position: absolute;
   top: calc(80vh - 2rem);
   content: ' ';
-  background-image: url('/images/wave-brush.svg');
+  background-image: url('../i/wave-brush.svg');
   background-size: 120vw 2rem;
   background-position: center;
   height: 2rem;
@@ -169,7 +173,7 @@ section.hero {
   bottom: -3.5rem;
   left: -1.5rem;
   content: ' ';
-  background-image: url('/images/wave-brush.svg');
+  background-image: url('../i/wave-brush.svg');
   background-size: 120vw 2rem;
   background-position: center;
   height: 2rem;
@@ -242,7 +246,9 @@ html.is-animating.swup-theme-reverse.is-leaving .swup-transition-main {
 
 /* Laptops */
 @media (min-width: 1024px) {
-
+  .hero__text:after {
+    display: none;
+  }
 }
 
 /* Desktop */

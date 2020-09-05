@@ -10,35 +10,8 @@
 
   </head>
   <body>
-    <nav>
-      <div class="nav__bar">
-        <a href="/index.html" class="nav__logo">
-          <img src="i/htk-logo-horizontaal.png" alt="Het Trojaanse Kalf Logo">
-        </a>
-        <button class="nav__hamburger">
-          <svg id="icon__hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-          <svg id="icon__close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-        </button>
-      </div>
-      <ul class="nav__links">
-        <li><a class="nav__link" href="/index.html" tabindex="-1">
-          <div class="nav__thumbnail" id="th-home"></div>
-          Home
-        </a></li>
-        <li><a class="nav__link" href="/over-ons.html" tabindex="-1">
-          <div class="nav__thumbnail" id="th-over-ons"></div>
-          Over Ons
-        </a></li>
-        <li><a class="nav__link" href="/max.html" tabindex="-1">
-          <div class="nav__thumbnail" id="th-max"></div>
-          Max (8+)
-        </a></li>
-        <li><a class="nav__link" href="/contact.html" tabindex="-1">
-          <div class="nav__thumbnail" id="th-contact"></div>
-          Contact
-        </a></li>
-      </ul>
-    </nav>
+
+    <?php include 'nav.php' ?>
 
     <main id="swup" class="swup-transition-main">
       <section class="hero">
@@ -57,13 +30,13 @@
       <section>
         <h2>Kleinere titel gaat hier</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <a class="link primary" href="/over-ons.html">
+        <a class="link primary" href="/htk/over-ons.html">
           Over Ons
           <svg class="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
-        <a class="link secondary" href="/over-ons.html">
+        <a class="link secondary" href="/htk/over-ons.html">
           Over Ons
           <svg class="right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
